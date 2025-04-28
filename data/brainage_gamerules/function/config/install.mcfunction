@@ -2,6 +2,18 @@ tellraw @a [{"text":"Brainage's Gamerules ","color": "green"},{"text": "installe
 
 function brainage_gamerules:sounds/click
 
+# Add Triggers
+scoreboard objectives add brainage_gamerules.about trigger {"text": "About","color": "green"}
+scoreboard objectives add brainage_gamerules.config trigger {"text": "Config","color": "green"}
+
+# Add New Player Joined Flag
+scoreboard objectives add brainage_gamerules.new_player_joined dummy
+scoreboard players set @a brainage_gamerules.new_player_joined 0
+
+# Add Install Flag
+scoreboard objectives add brainage_gamerules.installed dummy
+scoreboard players set #brainage_gamerules brainage_gamerules.installed 1
+
 # Gamerules
 gamerule blockExplosionDropDecay false
 gamerule doInsomnia false
@@ -26,15 +38,3 @@ scoreboard objectives add brainage_gamerules.dummy_diamond_ore_mined minecraft.m
 
 scoreboard objectives add brainage_gamerules.diamond_ore_mined dummy "Diamond Ore Mined"
 scoreboard objectives setdisplay sidebar brainage_gamerules.diamond_ore_mined
-
-# Add Triggers
-scoreboard objectives add brainage_gamerules.about trigger {"text": "About","color": "green"}
-scoreboard objectives add brainage_gamerules.config trigger {"text": "Config","color": "green"}
-
-# Add New Player Joined Flag
-scoreboard objectives add brainage_gamerules.new_player_joined dummy
-scoreboard players set @a brainage_gamerules.new_player_joined 0
-
-# Add Install Flag
-scoreboard objectives add brainage_gamerules.installed dummy
-scoreboard players set #brainage_gamerules brainage_gamerules.installed 1

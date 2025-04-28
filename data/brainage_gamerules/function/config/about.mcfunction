@@ -2,7 +2,7 @@ tellraw @s {"text": "                                ","color": "gray","striketh
 tellraw @s {"text": "Brainage's Gamerules | About","color": "gray"}
 tellraw @s {"text": "                                ","color": "gray","strikethrough": true}
 
-tellraw @s {"text": "No about section yet.","color": "gray"}
+tellraw @s {"text": "Sets up gamerules and scoreboard objectives for Brainage's servers.","color": "gray"}
 
 tellraw @s {"text": "                                ","color": "gray","strikethrough": true}
 
