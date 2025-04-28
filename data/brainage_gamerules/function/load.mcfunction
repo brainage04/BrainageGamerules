@@ -1,0 +1,5 @@
+tellraw @a [{"text":"Brainage's Gamerules","color": "green"},{"text": " loaded. | ","color": "yellow"},{"text": "ABOUT","color": "green","hover_event": {"action": "show_text","value": [{"text": "Click to learn about Brainage's Gamerules.\n","color": "white"},{"text": "Executes command \"/trigger brainage_gamerules.about\"","color": "gray"}]},"click_event": {"action": "run_command","command": "/trigger brainage_gamerules.about"}},{"text": " | ","color": "yellow"},{"text": "CONFIG","color": "green","hover_event": {"action": "show_text","value": [{"text": "Click to configure Brainage's Gamerules.\n","color": "white"},{"text": "Executes command \"/trigger brainage_gamerules.config\"","color": "gray"}]},"click_event": {"action": "run_command","command": "/trigger brainage_gamerules.config"}}]
+
+# Check for Install
+scoreboard objectives add brainage_gamerules.installed dummy
+execute unless score #brainage_gamerules brainage_gamerules.installed matches 1 run function brainage_gamerules:config/install
